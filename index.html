@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#061936">
+  <meta name="description" content="Crie orçamentos de serviços da Start Náutica e gere seu PDF.">
+  <title>Orçamentos | Start Náutica</title>
+  <link rel="icon" href="assets/logo.jpeg">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="vendor/jspdf.umd.min.js"></script>
+  <script defer src="assets/logo-data.js"></script>
+  <script defer src="pdf.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="topbar"><div class="brand"><img src="assets/logo.jpeg" alt="Start Náutica"><div><strong>START NÁUTICA</strong><span>Restauração e valorização de embarcações</span></div></div><span class="top-label">ORÇAMENTOS</span></header>
+  <main>
+    <div class="page-heading"><div><p class="eyebrow">DO SERVIÇO AO PRÓXIMO DESTINO</p><h1>Novo orçamento</h1><p>Preencha, confira e envie para o cliente.</p></div></div>
+    <div class="workspace">
+      <div class="editor">
+        <form id="quote-form">
+          <section class="panel"><div class="section-heading"><span class="step">01</span><h2>Cliente e embarcação</h2></div><div class="fields">
+            <label class="wide">Cliente <span class="optional">opcional</span><input name="client" maxlength="100" placeholder="Nome do cliente" autocomplete="name"></label>
+            <label>Embarcação<input name="boat" maxlength="80" required placeholder="Ex.: Quattro Bluu"></label>
+            <label>Modelo <span class="optional">opcional</span><input name="model" maxlength="80" placeholder="Ex.: Sessa 44"></label>
+            <label class="wide">Local<input name="location" maxlength="160" required placeholder="Ex.: Iate Clube de Caiobá"></label>
+            <label>Data<input type="date" name="date" required></label>
+            <label>Responsável técnico<input name="responsible" maxlength="100" required value="Kelvin Suarez"></label>
+          </div></section>
+          <section class="panel"><div class="section-heading"><span class="step">02</span><h2>Serviços</h2><span id="service-count" class="badge">0 adicionados</span></div>
+            <div id="service-list"></div>
+            <div class="service-editor"><label>Título do serviço<input id="service-title" maxlength="120" placeholder="Ex.: Reparo e pintura do bordo – bombordo"></label>
+              <label>Descrição<textarea id="service-description" maxlength="5000" rows="7" placeholder="Descreva o trabalho. Você pode separar as etapas em linhas."></textarea></label>
+              <div class="field-help"><span>As quebras de linha aparecem no orçamento.</span><span id="char-count">0 / 5.000</span></div>
+              <div class="service-actions"><button id="add-service" type="button" class="secondary">+ Adicionar serviço</button><button id="cancel-edit" type="button" class="text-button" hidden>Cancelar edição</button></div>
+            </div>
+          </section>
+          <section class="panel"><div class="section-heading"><span class="step">03</span><h2>Valor e condições</h2></div><div class="fields">
+            <label class="wide">Investimento total (R$)<input name="amount" inputmode="decimal" required maxlength="20" placeholder="15.300,00"></label>
+            <label class="wide">Prazo<input name="deadline" maxlength="300" required placeholder="Até 10 dias, sujeito às condições climáticas."></label>
+            <label class="wide">Observações <span class="optional">opcional</span><textarea name="notes" rows="4" maxlength="3000" placeholder="Condições de pagamento, validade da proposta ou outras informações."></textarea></label>
+          </div></section>
+          <div class="finish"><button class="primary" id="generate" type="submit">Gerar PDF <span aria-hidden="true">↓</span></button><p>Salve o PDF antes de fechar a página. O preenchimento não fica guardado.</p></div>
+        </form>
+        <div id="status" role="status" aria-live="polite"></div>
+        <div id="pdf-result" class="panel" hidden><h2>Seu orçamento está pronto</h2><div class="result-actions"><a id="download" class="secondary" download>Baixar PDF</a><button type="button" id="share" class="primary" hidden>Compartilhar PDF</button></div><p>No iPhone, use Compartilhar para enviar pelo WhatsApp ou salvar em Arquivos.</p></div>
+      </div>
+      <aside class="preview-area"><div class="preview-label"><h2>Prévia do orçamento</h2><span>ATUALIZA AO PREENCHER</span></div><article id="preview" class="paper"></article><p class="preview-note">No PDF, o conteúdo é distribuído em páginas A4 automaticamente.</p></aside>
+    </div>
+  </main>
+  <footer class="app-footer">START NÁUTICA <span>Seu barco, sempre em seu melhor.</span></footer>
+</body>
+</html>
