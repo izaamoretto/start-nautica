@@ -4,7 +4,7 @@ Um projeto de fim de semana que nasceu de uma necessidade bem próxima de mim: f
 
 Ele trabalha com restauração e valorização de embarcações e usava um modelo no Canva para montar as propostas pelo notebook. Quando passou a depender só do celular, esse processo ficou mais trabalhoso.
 
-Como já trabalho com tecnologia há cinco anos, resolvi aproveitar o fim de semana para experimentar a IA na prática e ajudar a resolver esse problema. Foi assim que surgiu esse gerador de orçamentos 😊
+Resolvi aproveitar o fim de semana para experimentar a IA na prática e ajudar a resolver esse problema. Foi assim que surgiu esse gerador de orçamentos.
 
 **[Acesse o projeto aqui](https://izaamoretto.github.io/start-nautica/)**
 
@@ -27,7 +27,7 @@ O foco foi deixar o uso simples e o documento organizado, mesmo quando o orçame
 
 Usei **HTML, CSS e JavaScript**, com a biblioteca **jsPDF** para gerar os documentos e o **GitHub Pages** para publicar o site.
 
-A IA me ajudou a escrever o código e fazer os ajustes. Minha parte foi trazer o problema, definir o que precisava funcionar, avaliar o resultado e ir refinando a experiência e o layout. Até o tamanho do valor no PDF entrou nos ajustes!
+A IA me ajudou a escrever o código e fazer os ajustes. Minha parte foi trazer o problema, definir o que precisava funcionar, avaliar o resultado e ir refinando a experiência e o layout.
 
 Foi uma oportunidade de explorar essa forma de desenvolver com um objetivo concreto, acompanhando o projeto desde a ideia até a publicação.
 
@@ -55,5 +55,3 @@ Os principais arquivos são:
 - `vendor/`: biblioteca jsPDF e sua licença.
 
 ---
-
-Um projeto feito com apoio de IA e uma necessidade real como ponto de partida. 💙
